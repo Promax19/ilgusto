@@ -155,6 +155,13 @@ section{padding:60px 0;}
 .video-caja{flex:0 0 200px;}
 .video-caja video{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:12px;background:var(--papel-2);}
 .video-caja p{margin-top:8px;font-size:0.85rem;color:var(--tinta-2);text-align:center;}
+.video-mas{flex:0 0 200px;aspect-ratio:9/16;border-radius:12px;background:var(--tinta);color:var(--papel);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:20px;text-align:center;transition:transform 150ms var(--ease-out);}
+.video-mas:active{transform:scale(0.97);}
+.video-mas-texto{display:flex;flex-direction:column;gap:4px;}
+.video-mas-texto b{font-family:'Fraunces', serif;font-size:1.5rem;font-weight:600;}
+.video-mas-texto span{font-size:0.9rem;color:rgba(250,244,230,0.75);}
+@media (hover:hover) and (pointer:fine){.video-mas:hover .video-mas-flecha{transform:translateX(5px);}}
+.video-mas-flecha{transition:transform 200ms var(--ease-out);color:var(--oro);}
 .hecho-a-mano-texto{color:var(--tinta-2);max-width:60ch;font-size:1.02rem;}
 
 /* ---------- Menú: lista editorial, no botones-icono ---------- */
@@ -461,6 +468,11 @@ footer{background:var(--tinta);color:var(--papel);padding:36px 0 22px;}
           <source src="images/videos/pasta-tomate.mp4" type="video/mp4">
         </video>
       </div>
+      <a class="video-mas" href="https://instagram.com/pizzeriailgusto.santapola" target="_blank" rel="noopener">
+        <svg class="video-mas-ig" viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none"/></svg>
+        <span class="video-mas-texto"><b data-i18n="videos_mas">Ver más</b><span data-i18n="videos_mas_sub">vídeos y fotos en Instagram</span></span>
+        <svg class="video-mas-flecha" viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
     </div>
     <p class="hecho-a-mano-texto" data-i18n="hecho_texto">Nada de masa precocinada ni salsas de bote. Cada mañana en Il Gusto amasamos la pizza, estiramos la pasta y preparamos las salsas desde cero — como se ha hecho siempre en Italia.</p>
   </div>
@@ -792,6 +804,7 @@ footer{background:var(--tinta);color:var(--papel);padding:36px 0 22px;}
 // ============================================================
 var traducciones = {
   es: {
+    videos_mas: "Ver más", videos_mas_sub: "vídeos y fotos en Instagram",
     menu_extras_gf: "Extras: carne, queso o pescado +2,00 € · verduras +1,50 € · sin gluten +3,50 €", menu_extras: "Extras: carne, queso o pescado +2,00 € · verduras +1,50 €", menu_bocadillos: "Todos los bocadillos se sirven con lechuga, tomate y a elegir entre salsa de ajo, picante o de la casa.", menu_aviso_pasta: "Elige el formato de tu pasta: spaghetti, tagliatelle, maccheroni, ravioli de carne o ravioli de ricotta y espinacas.", cat_ensaladas: "Ensaladas", cat_pan: "Pan Casero", cat_panecitos: "Panecitos", cat_refrescos: "Refrescos", cat_cerveza: "Cerveza", cat_botellas: "Botellas", cat_vino_rosso: "Vino Rosso", cat_vino_blanco: "Vino Blanco", cat_vino_rose: "Vino Rosé", cat_vino_italiano: "Vino Italiano", modal_plato: "Plato nº",
     nav_nosotros: "Nosotros", nav_platos: "Nuestros platos", nav_menu: "Menú", nav_domicilio: "Domicilio", nav_horario: "Horario & ubicación", nav_reservar: "Reservar",
     hero_desc: "Pizza al horno, pasta fresca y recetas italianas de toda la vida, en el corazón de Santa Pola.",
@@ -815,6 +828,7 @@ var traducciones = {
     resenas_eyebrow: "Lo que dicen de nosotros", resenas_h2: "Reseñas de nuestros clientes", resenas_texto: "Mira todas las reseñas reales, con fotos, en nuestro perfil de Google.", resenas_btn: "Ver reseñas en Google"
   },
   it: {
+    videos_mas: "Scopri di più", videos_mas_sub: "video e foto su Instagram",
     menu_extras_gf: "Extra: carne, formaggio o pesce +2,00 € · verdure +1,50 € · senza glutine +3,50 €", menu_extras: "Extra: carne, formaggio o pesce +2,00 € · verdure +1,50 €", menu_bocadillos: "Tutti i panini sono serviti con lattuga, pomodoro e, a scelta, salsa all'aglio, piccante o della casa.", menu_aviso_pasta: "Scegli il formato della tua pasta: spaghetti, tagliatelle, maccheroni, ravioli di carne o ravioli di ricotta e spinaci.", cat_ensaladas: "Insalate", cat_pan: "Pane casereccio", cat_panecitos: "Panini", cat_refrescos: "Bibite analcoliche", cat_cerveza: "Birra", cat_botellas: "Bottiglie", cat_vino_rosso: "Vino rosso", cat_vino_blanco: "Vino bianco", cat_vino_rose: "Vino rosato", cat_vino_italiano: "Vino italiano", modal_plato: "Piatto n.",
     nav_nosotros: "Chi siamo", nav_platos: "I nostri piatti", nav_menu: "Menù", nav_domicilio: "Consegna a domicilio", nav_horario: "Orari & dove siamo", nav_reservar: "Prenota",
     hero_desc: "Pizza al forno, pasta fresca e ricette italiane di sempre, nel cuore di Santa Pola.",
@@ -838,6 +852,7 @@ var traducciones = {
     resenas_eyebrow: "Cosa dicono di noi", resenas_h2: "Recensioni dei nostri clienti", resenas_texto: "Guarda tutte le recensioni reali, con foto, sul nostro profilo Google.", resenas_btn: "Vedi le recensioni su Google"
   },
   fr: {
+    videos_mas: "Voir plus", videos_mas_sub: "vidéos et photos sur Instagram",
     menu_extras_gf: "Suppléments : viande, fromage ou poisson +2,00 € · légumes +1,50 € · sans gluten +3,50 €", menu_extras: "Suppléments : viande, fromage ou poisson +2,00 € · légumes +1,50 €", menu_bocadillos: "Tous les sandwichs sont servis avec laitue, tomate et, au choix, sauce à l'ail, piquante ou maison.", menu_aviso_pasta: "Choisissez votre format de pâtes : spaghetti, tagliatelle, maccheroni, ravioli à la viande ou ravioli ricotta-épinards.", cat_ensaladas: "Salades", cat_pan: "Pain maison", cat_panecitos: "Petits pains", cat_refrescos: "Boissons fraîches", cat_cerveza: "Bière", cat_botellas: "Bouteilles", cat_vino_rosso: "Vin rouge", cat_vino_blanco: "Vin blanc", cat_vino_rose: "Vin rosé", cat_vino_italiano: "Vin italien", modal_plato: "Plat n°",
     nav_nosotros: "À propos", nav_platos: "Nos plats", nav_menu: "Carte", nav_domicilio: "Livraison", nav_horario: "Horaires & accès", nav_reservar: "Réserver",
     hero_desc: "Pizza au four, pâtes fraîches et recettes italiennes de toujours, au cœur de Santa Pola.",
@@ -861,6 +876,7 @@ var traducciones = {
     resenas_eyebrow: "Ce que l'on dit de nous", resenas_h2: "Avis de nos clients", resenas_texto: "Découvrez tous les avis réels, avec photos, sur notre profil Google.", resenas_btn: "Voir les avis sur Google"
   },
   de: {
+    videos_mas: "Mehr sehen", videos_mas_sub: "Videos und Fotos auf Instagram",
     menu_extras_gf: "Extras: Fleisch, Käse oder Fisch +2,00 € · Gemüse +1,50 € · glutenfrei +3,50 €", menu_extras: "Extras: Fleisch, Käse oder Fisch +2,00 € · Gemüse +1,50 €", menu_bocadillos: "Alle Brote werden mit Salat und Tomate serviert, dazu nach Wahl Knoblauchsauce, scharfe Sauce oder Hausmarke.", menu_aviso_pasta: "Wähle dein Pastaformat: Spaghetti, Tagliatelle, Maccheroni, Fleisch-Ravioli oder Ravioli mit Ricotta und Spinat.", cat_ensaladas: "Salate", cat_pan: "Hausgemachtes Brot", cat_panecitos: "Brötchen", cat_refrescos: "Erfrischungsgetränke", cat_cerveza: "Bier", cat_botellas: "Flaschen", cat_vino_rosso: "Rotwein", cat_vino_blanco: "Weißwein", cat_vino_rose: "Roséwein", cat_vino_italiano: "Italienischer Wein", modal_plato: "Gericht Nr.",
     nav_nosotros: "Über uns", nav_platos: "Unsere Gerichte", nav_menu: "Speisekarte", nav_domicilio: "Lieferservice", nav_horario: "Öffnungszeiten & Lage", nav_reservar: "Reservieren",
     hero_desc: "Ofenpizza, frische Pasta und traditionelle italienische Rezepte im Herzen von Santa Pola.",
@@ -884,6 +900,7 @@ var traducciones = {
     resenas_eyebrow: "Was man über uns sagt", resenas_h2: "Bewertungen unserer Kunden", resenas_texto: "Sieh dir alle echten Bewertungen mit Fotos auf unserem Google-Profil an.", resenas_btn: "Bewertungen auf Google ansehen"
   },
   en: {
+    videos_mas: "See more", videos_mas_sub: "videos and photos on Instagram",
     menu_extras_gf: "Extras: meat, cheese or fish +2,00 € · vegetables +1,50 € · gluten-free +3,50 €", menu_extras: "Extras: meat, cheese or fish +2,00 € · vegetables +1,50 €", menu_bocadillos: "All sandwiches come with lettuce, tomato and your choice of garlic, spicy or house sauce.", menu_aviso_pasta: "Choose your pasta shape: spaghetti, tagliatelle, maccheroni, meat ravioli or ricotta and spinach ravioli.", cat_ensaladas: "Salads", cat_pan: "Homemade bread", cat_panecitos: "Bread rolls", cat_refrescos: "Soft drinks", cat_cerveza: "Beer", cat_botellas: "Bottles", cat_vino_rosso: "Red wine", cat_vino_blanco: "White wine", cat_vino_rose: "Rosé wine", cat_vino_italiano: "Italian wine", modal_plato: "Dish no.",
     nav_nosotros: "About us", nav_platos: "Our dishes", nav_menu: "Menu", nav_domicilio: "Delivery", nav_horario: "Hours & location", nav_reservar: "Book a table",
     hero_desc: "Oven-baked pizza, fresh pasta and traditional Italian recipes, right in the heart of Santa Pola.",
